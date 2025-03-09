@@ -1,4 +1,6 @@
 local opt = vim.o
+vim.diagnostic.config({virtual_text = true}) -- Enables diagnostics to appear next to code
+
 opt.autochdir = true
 
 -- line numbers
@@ -12,7 +14,7 @@ opt.expandtab = true
 opt.autoindent = true
 
 -- line wrapping
-opt.wrap = false 
+opt.wrap = false
 
 -- cursor line
 opt.cursorline = true
