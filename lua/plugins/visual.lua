@@ -1,16 +1,11 @@
 return {
-    -- Startscreen
+    -- Dashboard
     {
-        'nvimdev/dashboard-nvim',
-        event = 'VimEnter',
-        config = function()
-            require('dashboard').setup {
-                -- config
-            }
-        end,
-        dependencies = { {'nvim-tree/nvim-web-devicons'}}
+        'goolord/alpha-nvim',
+        config = function ()
+            require'alpha'.setup(require'alpha.themes.dashboard'.config)
+        end
     },
-
     -- Treesitter/Parser
     {
         "nvim-treesitter/nvim-treesitter",
@@ -25,5 +20,14 @@ return {
         lazy = false,
         priority = 1000,
         opts = {},
-    }
+    },
+
+    -- Indentation guides
+    {
+    "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+    ---@module "ibl"
+    ---@type ibl.config
+    opts = {},
+    },
 }
