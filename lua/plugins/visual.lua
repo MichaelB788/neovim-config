@@ -1,12 +1,29 @@
 return {
-    -- Treesitter: Boring syntax no more!
+    -- Startscreen
+    {
+        'nvimdev/dashboard-nvim',
+        event = 'VimEnter',
+        config = function()
+            require('dashboard').setup {
+                -- config
+            }
+        end,
+        dependencies = { {'nvim-tree/nvim-web-devicons'}}
+    },
+
+    -- Treesitter/Parser
     {
         "nvim-treesitter/nvim-treesitter",
-        build = function() 
+        build = function()
             require("nvim-treesitter.install").update({ with_sync = true })()
         end,
     },
 
-    -- Kanagawa: The best neovim colorscheme
-    { "rebelot/kanagawa.nvim" }
+    -- Colorscheme
+    {
+        "folke/tokyonight.nvim",
+        lazy = false,
+        priority = 1000,
+        opts = {},
+    }
 }
