@@ -1,6 +1,4 @@
 return {
-    -- img-clip: For lazy people like me who don't like saving their 
-    -- images manually
     {
         "HakonHarnes/img-clip.nvim",
         event = "VeryLazy",
@@ -12,8 +10,6 @@ return {
             },
         },
     },
-
-    -- Markdown preview
     {
         "iamcco/markdown-preview.nvim",
         cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
