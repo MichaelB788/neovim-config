@@ -31,6 +31,6 @@ km.set('n', '<leader>sp', ':vsplit<Enter>') -- Split the window vertically
 
 -- Misc.
 km.set('n', '<leader>M', ':e ++ff=dos<Enter>') -- Reread the document using dos
-km.set('n', 'L', 'gT') -- Move to left tab
-km.set('n', 'H', 'gt') -- Move to right tab
+km.set('n', 'L', 'gt') -- Move to left tab
+km.set('n', 'H', 'gT') -- Move to right tab
 km.set('n', 'w', '<C-w>') -- Pretense to window navigation
